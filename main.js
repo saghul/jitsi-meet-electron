@@ -26,6 +26,14 @@ autoUpdater.logger.transports.file.level = 'info';
 require('electron-debug')({ showDevTools: false });
 
 /**
+ * Enable automatic reloads in development mode.
+ */
+
+if (isDev) {
+    require('electron-reload')(path.join(__dirname, 'build'));
+}
+
+/**
  * The window object that will load the iframe with Jitsi Meet.
  * IMPORTANT: Must be defined as global in order to not be garbage collected
  * acidentally.

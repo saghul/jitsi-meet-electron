@@ -12,7 +12,8 @@
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "watch": "webpack --config ./webpack.config.js --mode development --watch"
   },
   "build": {
     "appId": "org.jitsi.jitsi-meet",
@@ -89,6 +90,7 @@
     "electron-debug": "2.0.0",
     "electron-is-dev": "0.3.0",
     "electron-log": "2.2.16",
+    "electron-reload": "1.2.5",
     "electron-updater": "3.1.1",
     "electron-window-state": "4.1.1",
     "history": "4.7.2",
